@@ -7,8 +7,9 @@ class UsersController < ApplicationController
   def new
     @user=User.new
   end
-  def show  #associated with GET req to /users
+  def show  #associated with GET req to /users/1
     @user=User.find(params[:id])
+    @microposts=@user.microposts.paginate(page: params[:page])
   end
   def create #associated with POST req to /users
 	@user=User.new(params[:user])
@@ -44,16 +45,7 @@ class UsersController < ApplicationController
   end
 
   private
-	def signed_in_user
-		unless signed_in?
-			store_location
-			redirect_to signin_url, notice: "Please sign in."
-		end
-	end
-	#unless signed_in?
-  	#	flash[:notice] = "Please sign in."
-  	#	redirect_to signin_url
-	#end
+	
 	
 	def correct_user
       		@user = User.find(params[:id])

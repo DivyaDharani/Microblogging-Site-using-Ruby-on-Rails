@@ -7,8 +7,9 @@ class UsersController < ApplicationController
   def new
     @user=User.new
   end
-  def show  #associated with GET req to /users
+  def show  #associated with GET req to /users/1
     @user=User.find(params[:id])
+    @microposts=@user.microposts.paginate(page: params[:page])
   end
   def create #associated with POST req to /users
 	@user=User.new(params[:user])
