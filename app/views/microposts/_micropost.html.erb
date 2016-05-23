@@ -8,4 +8,9 @@
                                      data: { confirm: "You sure?" },
                                      title: micropost.content %>
   <% end %>
+
+	
+	<%=my_like_link(micropost.id,'/likesctrl/',"put") %>	
+	<%=my_unlike_link(micropost.id,'/unlikesctrl/',"put") %>
+	
 </li>
