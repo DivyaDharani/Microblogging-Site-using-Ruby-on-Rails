@@ -3,9 +3,9 @@ class CreateMicroposts < ActiveRecord::Migration
     create_table :microposts do |t|
       t.string :content
       t.integer :user_id
-      t.integer :num_likes, :default=>0 
-      t.timestamps #adds created_at and updated_at columns
+      t.integer :num_likes,:default=>0 
+      t.integer :num_unlikes,:default=>0
+      t.timestamps
     end
-	add_index(:microposts, [:user_id,:created_at])
   end
 end

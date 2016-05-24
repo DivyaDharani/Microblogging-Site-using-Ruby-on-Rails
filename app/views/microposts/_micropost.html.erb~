@@ -10,7 +10,14 @@
   <% end %>
 
 	
-	<%=my_like_link(micropost.id,'/likesctrl/',"put") %>	
+	&nbsp;
+	<%=my_like_link(micropost.id,'/likesctrl/',"put") %> 
+	&nbsp;
 	<%=my_unlike_link(micropost.id,'/unlikesctrl/',"put") %>
+	<div>
+	<font color="darkviolet"><%=likes(feed_item.id)%></font>
+	
+	<font color="darkolivegreen"><%=unlikes(feed_item.id)%></font>
+	</div>
 	
 </li>

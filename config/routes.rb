@@ -26,9 +26,9 @@ SampleApp::Application.routes.draw do
 
   resources(:microposts,only: [:create,:destroy])
 
-  resources(:likesctrl,only: [:update,:destroy])
+  resources(:likesctrl,only: [:update])
 
-  resources(:unlikesctrl,only: [:update,:destroy])   
+  resources(:unlikesctrl,only: [:update])   
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

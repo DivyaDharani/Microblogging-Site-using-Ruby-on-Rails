@@ -14,17 +14,17 @@ class UnlikesctrlController < ApplicationController
 	else
 		if @obj.like_or_unlike=="unlike"
 			@obj.destroy
+		elsif @obj.like_or_unlike=="like"
+			@obj.update_attribute(:like_or_unlike,"unlike")
+			@obj.save
 		end
 		
 	end
-	redirect_to root_url
-  end
-
-  def destroy
+	redirect_to :back
   end
 
   def record_not_unique
 	flash[:error] = "Already done!"
-      	redirect_to root_url
+      	redirect_to :back
   end
 end
