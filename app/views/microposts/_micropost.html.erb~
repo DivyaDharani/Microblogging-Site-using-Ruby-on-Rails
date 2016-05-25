@@ -15,9 +15,9 @@
 	&nbsp;
 	<%=my_unlike_link(micropost.id,'/unlikesctrl/',"put") %>
 	<div>
-	<font color="darkviolet"><%=likes(feed_item.id)%></font>
+	<font color="darkviolet"><%=likes(micropost.id)%></font>
 	
-	<font color="darkolivegreen"><%=unlikes(feed_item.id)%></font>
+	<font color="steelblue"><%=unlikes(micropost.id)%></font>
 	</div>
 	
 </li>

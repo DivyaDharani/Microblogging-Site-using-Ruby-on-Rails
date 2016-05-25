@@ -1,11 +1,5 @@
 SampleApp::Application.routes.draw do
-  get "unlikesctrl/create"
-
-  get "unlikesctrl/destroy"
-
-  get "likesctrl/create"
-
-  get "likesctrl/destroy"
+ 
 
   resources :users  
   
@@ -28,7 +22,15 @@ SampleApp::Application.routes.draw do
 
   resources(:likesctrl,only: [:update])
 
-  resources(:unlikesctrl,only: [:update])   
+  resources(:unlikesctrl,only: [:update]) 
+
+  resources :users do
+	member do
+		get :following, :followers	
+	end
+  end
+
+  resources :relationships, only: [:create,:destroy]  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

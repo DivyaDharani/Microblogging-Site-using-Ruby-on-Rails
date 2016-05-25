@@ -22,6 +22,7 @@ namespace :db do
 		users.each do |user|
 			user.microposts.create!(content: content)
 		end
+	end
   end
 end
 
