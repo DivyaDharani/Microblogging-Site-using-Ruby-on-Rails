@@ -1,10 +1,13 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: project_development
+  database: d1hlmvgk6ffo7h
+  host: ec2-54-243-201-116.compute-1.amazonaws.com
   pool: 5
-  username: divya
-  password:
+  username: sdxbdjglhqsapn 
+  password: ZuXoBjHipJkTPszJ2l3x0Psf5w
+  port: 5432
+
 
 test: &TEST
   adapter: postgresql
