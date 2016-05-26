@@ -1,0 +1,2 @@
+$("#likefor<%=@mic_id %>").html("<%= escape_javascript(render('users/unfollow')) %>")
+

@@ -10,12 +10,12 @@ def my_like_link(m_id,url,meth)
 		name="Liked"
 		color="red"
 	end
-	return "<a href='#{url}' data-method='#{meth}' style='color:#{color};'>#{name}</a>".html_safe
+	return "<a href='#{url}' id='#{m_id}' data-method='#{meth}' data-remote='true' style='color:#{color};'>#{name}</a>".html_safe
 end
 
 def likes(m_id)
 	mpost=Micropost.find(m_id)
-	count=post.num_likes
+	count=mpost.num_likes
 	if(count==1)
 		return "#{count} like"
 	else

@@ -1,0 +1,14 @@
+<div id="likefor<%=@mid%>">
+
+	&nbsp;
+	<%=my_like_link(@mid,'likesctrl/',"put") %> 
+	&nbsp;
+	<%=my_unlike_link(@mid,'unlikesctrl/',"put") %>
+	<div>
+	&nbsp;
+	<font color="darkviolet"><%=likes(@mid)%></font>
+	&nbsp;
+	<font color="seagreen"><%=unlikes(@mid)%></font>
+	</div>
+
+</div>

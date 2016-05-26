@@ -27,7 +27,7 @@ class LikesctrlController < ApplicationController
 		end
 		
 	end
-	redirect_to :back
+      redirect_to :back
   end
 
   

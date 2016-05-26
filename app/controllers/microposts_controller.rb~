@@ -19,14 +19,7 @@ class MicropostsController < ApplicationController
   end
 
 
-	def like
-		render 'static_pages/about'
-	end
 	
-	def unlike
-		render 'static_pages/help'
-	end
-
 
   private
 

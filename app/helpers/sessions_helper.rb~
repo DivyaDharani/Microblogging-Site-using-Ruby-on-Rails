@@ -24,7 +24,7 @@ module SessionsHelper
 	def current_user?(user)
 		user==current_user
 	end
-	def redirect_back_or(default)
+	def redirect_back_or_home
     		redirect_to(session[:return_to] || default)
     		session.delete(:return_to)
   	end
@@ -39,5 +39,10 @@ module SessionsHelper
       			redirect_to signin_url, notice: "Please sign in."
     		end
   	end
+	
+	#unless signed_in?
+  	#	flash[:notice] = "Please sign in."
+  	#	redirect_to signin_url
+	#end
 		 
 end
