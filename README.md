@@ -1,1 +1,1 @@
-# Microblogging Web Application using Ruby on Rails 
+# Microblogging Web Application using Ruby on Rails framework
